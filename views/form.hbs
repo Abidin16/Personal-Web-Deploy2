@@ -1,0 +1,94 @@
+<html>
+  <head>
+
+    <title>Abidin-Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/style.css" />
+    <script src="index1.js"></script>
+    <link rel="shortcut icon" href="/public/assett/logo.png" type="image/x-icon" />
+
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="/index"><img src="public/assett/logo.png" alt="#" /></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-5" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
+            </li>
+          </ul>
+
+          <form class="d-flex me-200 px-5">
+            <a class="btn text-white px-4" style="background-color: orangered;" href="/form" type="submit">Contact Me</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- contact form -->
+
+    <div class="container">
+      <div class="section">
+
+        <div class="form">
+          <form>
+            <h1>Form Informasi</h1>
+
+            <div style="margin-bottom: 10px;">
+              <label for="input-name">Name</label><br />
+              <input id="input-name" type="text" placeholder="Masukan Nama Anda" />
+            </div>
+
+            <div>
+              <label for="input-email">Email</label><br />
+              <input name="email" id="input-email" type="email" placeholder="Masukan Email Anda" />
+            </div>
+
+            <div>
+              <label for="input-subject">Subject</label>
+              <select id="input-subject">
+
+                <option>Lets's collaboration</option>
+                <option>Let's talk</option>
+                <option>Help to create some project</option>
+                <option>I'm hiring</option>
+
+              </select>
+            </div>
+
+            <div>
+              <label for="input-message">Your Message</label><br />
+              <textarea id="input-message"></textarea><br />
+
+              <input type="checkbox" id="checkbox" />
+              <label style="font-size: 15px;">Saya mengerti dan menyetujui syarat & ketentuan</label>
+            </div><br />
+
+            <center>
+              <button type="button" onclick="submitform()">Submit</button>
+            </center>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+  <footer>Copyright @2021 | Bootcamp</footer>
+
+</html>

@@ -1,0 +1,350 @@
+.bg-orange {
+  background-color: orangered;
+}
+.text-orange {
+  color: orangered !important;
+}
+
+.container-form {
+  width: 400px;
+}
+
+nav {
+  background-image: url(assett/dust_scratches.png);
+  height: 12vh !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  height: 100vh;
+  min-width: auto;
+  min-height: auto;
+}
+.container .section {
+  display: flex;
+  width: 100%;
+}
+
+.container .content-card {
+  flex: 30%;
+  display: flex;
+}
+
+.container .folio {
+  flex: 70%;
+  padding-left: 30px;
+}
+
+.section .folio .skill {
+  display: flex;
+}
+
+.section .folio p {
+  color: gray;
+}
+
+.skill div {
+  flex: 1;
+}
+
+.skill div p {
+  flex: 1;
+}
+
+.folio .skill div img {
+  width: 50px;
+  height: 50px;
+}
+
+.folio .sosial img {
+  width: 40px;
+  height: 40px;
+}
+
+.folio .awal h1 {
+  background-image: url(assett/dust_scratches.png);
+  padding-left: 100px;
+  margin-right: 100px;
+}
+
+/* Contact Card */
+.content-card .card {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 15px;
+  background-image: url(assett/dust_scratches.png);
+  height: 530px;
+}
+.section .content-card img {
+  width: 100%;
+  border-radius: 25px 40px;
+  padding-bottom: 5px;
+}
+.section .content-card h2 {
+  text-align: left;
+}
+.section .content-card p {
+  color: grey;
+  text-align: left;
+}
+
+.section .content-card table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.section table th {
+  background-color: lightsalmon;
+}
+
+footer {
+  background-image: url(assett/dust_scratches.png);
+  padding: 20px;
+}
+
+/* Form contact */
+
+.form {
+  display: flex;
+  padding: 10px 30px 10px 30px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -20px;
+  background-image: url(assett/dust_scratches.png);
+}
+
+.form h1 {
+  text-align: center;
+  font-family: "Times New Roman";
+}
+
+#input-name {
+  width: 90%;
+  border: 0px rgb(222, 222, 222);
+  border-radius: 8px;
+  padding: 8px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#input-email {
+  width: 90%;
+  border: 0px rgb(222, 222, 222);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#input-subject {
+  width: 90%;
+  border: 0px rgb(222, 222, 222);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#input-message {
+  width: 90%;
+  border: 0px rgb(222, 222, 222);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  justify-content: center;
+  display: flex;
+  background-color: #f4f3f3;
+  padding: 15px;
+  color: black;
+  background-image: url(assett/dust_scratches.png);
+}
+
+::placeholder {
+  font-family: "Times New Roman";
+}
+
+label {
+  font-family: "Times New Roman";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button {
+  width: 100px;
+  color: black;
+  border: 0 solid white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+button:active {
+  background-color: orangered;
+  color: white;
+}
+
+/* Akhir Form Contact */
+
+/* Blog list */
+
+.blog-list {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blog-list .blog-list-item {
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #dbdbdb;
+  border-radius: 8px;
+  display: flex;
+}
+
+.blog-list .blog-list-item .blog-image {
+  flex: 1;
+}
+
+.blog-list .blog-list-item .blog-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.blog-list .blog-list-item .blog-content {
+  padding-left: 20px;
+  flex: 2;
+}
+
+.blog-cn .blog-list-item .btn-group {
+  display: flex;
+  margin-bottom: 5px;
+  text-align: end;
+}
+
+.blog-cn .blog-list .btn-group .btn-edit {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  color: black;
+  background: #dbdbdb;
+}
+
+.blog-cn .blog-list .btn-group .btn-delete {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: #ec4d37;
+  color: #fff;
+}
+
+.blog-list h2 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blog-list .detail-blog-content {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.blog-list .blog-list-item p {
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.time {
+  text-align: right;
+  color: gray;
+}
+/* Blog Detail */
+
+.blog-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-detail-container {
+  width: 80%;
+  margin: 40px 0;
+}
+
+.blog-detail-container img {
+  width: 100%;
+}
+
+.blog-detail-container h2 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.blog-detail-container .author {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.blog-detail-container p {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: justify;
+}
+
+.cn:hover {
+  color: red;
+}
+.list-active:hover {
+  color: red;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.fa {
+  font-size: 20px;
+  color: #7a797e;
+}

@@ -1,0 +1,123 @@
+<html>
+  <head>
+
+    <title>Personal Web - Navbar & Layouting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/style.css" />
+
+    <link rel="shortcut icon" href="/public/assett/logo.png" type="image/x-icon" />
+
+  </head>
+
+  <body>
+    {{! Navbar }}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="/index"><img src="public/assett/logo.png" alt="#" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-5" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: orangered;" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="blog">Blog</a>
+            </li>
+          </ul>
+
+          <form class="d-flex me-200 px-5">
+
+            <a class="btn text-white px-4" style="background-color: orangered;" href="/form" type="submit">Contact Me</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    {{! Akhir Navbar }}
+
+    <!-- Contact Card -->
+
+    <div class="container">
+
+      <div class="section">
+
+        <div class="content-card">
+          <div class="card">
+
+            <img src="public/assett/foto.jpg" />
+
+            <h2>Abidin</h2>
+
+            <p style="font-weight: 200;">Saya menemukan bahwa semakin keras saya bekerja, semakin banyak keberuntungan yang saya milik dan menjadi Developer adalah karir yang menjanjikan</p>
+
+            <table style="border: 1px solid black;"">
+              <tr>
+                <th>Project Name</th>
+                <th>Year</th>
+              </tr>
+              {{#each card}}
+                <!--each => pengulangan . properti -->
+                <tr>
+                  <td>{{this.project}}</td>
+                  <td style="text-align: center;">{{this.year}}</td>
+                </tr>
+              {{/each}}
+            </table>
+          </div>
+        </div>
+
+        <!-- Akhir Card -->
+        <div class="folio">
+          <div class="awal">
+            <h1>Words of Encouragement</h1>
+            <p> Bagaimanapun keadaan kita, mau sedih, bahagia, waktu tidak pernah berhenti menunggu. Waktu tetap berjalan</p>
+            <p>Semua mimpi kita akan terwujud, jika kita punya keberanian untuk mengejarnya.</p>
+            <p>Tak ada rahasia untuk menggapai sukses. Sukses itu dapat terjadi karena persiapan, kerja keras, dan mau belajar dari kegagalan.</p>
+            <p>Ada dua aturan untuk menjadi sukses. Pertama, cari tahu hal yang ingin Anda lakukan. Kedua, lakukan hal tersebut.</p>
+          </div>
+
+          <div class="skill">
+
+            <div class="satu">
+              <img src="public/assett/js.png" />
+              <h3>Front End Javascript</h3>
+              <p> bahasa pemrograman jenis interpreter, sehingga kamu tidak memerlukan compiler untuk menjalankannya</p>
+            </div>
+
+            <div class="dua">
+              <img src="public/assett/git.png" />
+              <h3>Version Control</h3>
+              <p>
+                digunakan untuk menyimpan repository Menjadi wadah atau alat untuk kolaborasi dan mengerjakan sebuah project
+              </p>
+            </div>
+
+            {{! <div class="tiga">
+                                <img src="public/assett/deploy.png"><h3>Back End Developer</h3>
+                                <p>Software Developer yang bertanggung jawab dalam mengelola server, aplikasi, dan 
+                                 database agar dapat saling berkomunikasi 
+                                dengan baik dan lancar.</p>
+                                </div> }}
+
+          </div>
+          <div class="sosial">
+            <h2>Found Me On</h2>
+            <br />
+            <a href="https://web.whatsapp.com/"><img src="public/assett/wa.png" alt="" /></a>
+            <a href="https://www.instagram.com/"><img src="public/assett/ig.jpg" alt="" /></a>
+            <a href="https://web.whatsapp.com/"><img src="public/assett/tele.png" alt="" /></a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer></footer>
+  </body>
+</html>

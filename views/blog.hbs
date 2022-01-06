@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/style.css" />
+
+    <link rel="shortcut icon" href="/public/assett/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- NavBar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="/index"><img src="public/assett/logo.png" alt="#" /></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-5" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: orangered;" href="/blog">Blog</a>
+            </li>
+          </ul>
+
+          <form class="d-flex me-200 px-5">
+            {{#if isLogin}}
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-4" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <span class="nav-link active">Hello, {{user.name}}</span>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+                </li>
+              </ul>
+            {{else}}
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-5" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="register">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="login">Login</a>
+                </li>
+              </ul>
+            {{/if}}
+            <a class="btn text-white px-4" style="background-color: orangered;" href="/form" type="submit">Contact Me</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    {{! Akhir Navbar }}
+
+    {{#if messages.success}}
+      <div class="alert alert-success" role="alert" style="background-color: palegreen;">
+        {{messages.success}}
+      </div>
+    {{/if}}
+    <!-- Blog -->
+
+    <div class="blog-cn">
+
+      <div style="text-align: right; padding-right: 130px; margin-top: 50px;">
+        {{#if isLogin}}
+          <a
+            href="/add-blog"
+            style="
+            background-color: orangered; 
+            padding: 7px 20px; 
+            border: none; 
+            border-radius: 8px; 
+            color: white;
+            text-decoration: none"
+          >Add New Blog</a>
+        {{/if}}
+
+      </div>
+
+      <div id="contents" class="blog-list">
+        <!-- dynamic content would be here -->
+        {{#each blogs}}
+          <!--each => pengulangan . properti -->
+          <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="{{this.image}}" alt="" />
+            </div>
+            <div class="blog-content">
+
+              {{#if this.isLogin}}
+                <div class="btn-group justify-content-end">
+                  <a href="/edit-blog/{{this.id}} " style="text-decoration: none;" class="btn-edit">Edit Post</a>
+                  <a href="/delete-blog/{{this.id}}" style="text-decoration: none;" class="btn-delete">Delete Blog</a>
+                  {{! @index = bawaan dari hbs }}
+                </div>
+              {{/if}}
+
+              <h2>
+                <a href="/detail-blog/{{this.id}}" target="_blank">{{this.title}}</a>
+              </h2>
+              <div class="detail-blog-content">
+                {{this.post_at}}
+                |
+                {{this.author}}
+              </div>
+              <p>
+                {{this.content}}
+              </p>
+              <div class="time">{{this.post_age}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <script src="blog.js"></script>
+  </body>
+</html>

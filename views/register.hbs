@@ -1,0 +1,105 @@
+<html>
+  <head>
+
+    <title>register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="public/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/public/assett/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="/index"><img src="public/assett/logo.png" alt="#" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-5" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
+            </li>
+          </ul>
+
+          <form class="d-flex me-200 px-5">
+
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll px-5" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" style="color: orangered;" href="register">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login">Login</a>
+              </li>
+            </ul>
+
+            <a class="btn text-white px-4" style="background-color: orangered;" href="/form" type="submit">Contact Me</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Akhir Navbar -->
+
+    <!-- Form -->
+    <div class="container-form-blog d-flex justify-content-center">
+
+      <div class="container-form">
+        <p class="h1 text-center" style="margin-top: 30px;">Register</p>
+
+        <form action="/register" method="POST">
+          {{! penambahan action & method  }}
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap Anda" />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email" />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" id="password" placeholder="Password" />
+            <span
+              style=" position: absolute;
+                            transform: translate(0, -170%);
+                            right : 430px;
+                            cursor: pointer;"
+            >
+              <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+            </span>
+          </div>
+
+          <script>
+            var state= false; 
+              function toggle(){
+                if(state){ 
+                      document.getElementById("password").setAttribute("type", "password"); 
+                      document.getElementById("eye").style.color= '#7a797e'; state= false;
+                   } 
+                   else{
+                        document.getElementById("password").setAttribute("type", "text"); 
+                        document.getElementById("eye").style.color= '#5887ef'; 
+                        state= true; 
+                        } 
+              }
+          </script>
+
+          <div class="d-flex justify-content-star">
+            <button type="submit" class="btn bg-orange text-white">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <!-- Akhir Form -->
+  </body>
+</html>
